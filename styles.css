@@ -4,6 +4,10 @@
     font-family: 'Miriam Libre', sans-serif;
 }
 
+body{
+    background: lightgray;
+}
+
 #main-header{
     background-color: #2d3945;
     height: 70px;
@@ -63,6 +67,7 @@ input[type="email"],
 input[type="tel"],
 input[type="street-address"],
 input[type="zip"],
+input[type="password"],
 textarea,
 select{
     width: 100%;
@@ -79,6 +84,10 @@ select{
     text-align: right;
     padding-right: 7px;
     color: #b9bdc1;
+}
+
+textarea::placeholder{
+    text-align: left;
 }
 
 label{
@@ -143,6 +152,21 @@ footer{
     font-style: italic;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="street-address"]:focus,
+input[type="zip"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus{
+    background-color: #2d3945;
+    transition: background-color 1s;
+    color: white;
+    padding: 7px;
+    transition: padding 0.3s;
+}
+
 @media (min-width: 760px){
 
     
@@ -151,6 +175,7 @@ footer{
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
     input[type="text"],
@@ -158,11 +183,15 @@ footer{
     input[type="tel"],
     input[type="street-address"],
     input[type="zip"],
+    input[type="password"],
     select{
         width: 60%;
         margin-left: auto;
     }
 
+    .col label{
+        height: 40px;
+    }
 
 
 
