@@ -145,6 +145,13 @@ footer{
 
 @media (min-width: 760px){
 
+    
+    .col{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     input[type="text"],
     input[type="email"],
@@ -153,6 +160,10 @@ footer{
     input[type="zip"],
     select{
         width: 60%;
+        margin-left: auto;
     }
+
+
+
 
 }
